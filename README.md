@@ -44,6 +44,24 @@ flowchart LR
 
 The CLI validates input and delegates to focused modules. Core functions also remain importable for tests, notebooks, or integration into a larger defensive workflow. Runtime functionality uses only the Python standard library.
 
+## Run the guided demo
+
+See the main capabilities in one safe, fully offline workflow:
+
+```bash
+python demo.py
+```
+
+The demo generates a password without printing it, detects a synthetic file change, identifies a repeated SSH authentication-failure pattern, matches a documentation-only IOC against the bundled local list, and exports JSON, CSV, and plain-text findings. It uses only synthetic inputs and makes no network requests.
+
+Keep the generated manifest, reports, and machine-readable summary for inspection:
+
+```bash
+python demo.py --output-dir demo-results
+```
+
+The output directory must be empty. Generated files are ignored by Git when the directory is named `demo-results`.
+
 ## Installation
 
 Requirements:
@@ -227,6 +245,7 @@ python-security-assessment-toolkit/
 │   ├── ioc.py                     # Local and opt-in provider IOC lookup
 │   └── reports.py                 # JSON, CSV, and text exports
 ├── docs/demo.svg                  # Illustrative terminal preview
+├── demo.py                        # Guided, synthetic offline demonstration
 ├── samples/
 │   ├── iocs.json                  # Synthetic indicators
 │   └── sample_auth.log            # Synthetic OpenSSH-style events
@@ -249,7 +268,7 @@ python -m unittest discover -s tests -v
 Check that all Python sources compile:
 
 ```bash
-python -m compileall -q cybersec_toolkit main.py
+python -m compileall -q cybersec_toolkit main.py demo.py
 ```
 
 Network tests use loopback sockets and mocks; they do not scan public hosts. GitHub Actions runs the suite on Python 3.11 and 3.13 for pushes and pull requests.

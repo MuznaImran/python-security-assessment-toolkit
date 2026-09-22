@@ -12,5 +12,6 @@ dist/
 .env.*
 !.env.example
 reports/
+demo-results/
 *.log
 !samples/sample_auth.log
