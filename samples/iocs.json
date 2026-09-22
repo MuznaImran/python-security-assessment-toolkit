@@ -1,0 +1,23 @@
+{
+  "description": "Synthetic demonstration indicators only; no reputation claim is implied.",
+  "indicators": [
+    {
+      "value": "203.0.113.42",
+      "type": "ip",
+      "label": "Synthetic training indicator",
+      "source": "documentation example"
+    },
+    {
+      "value": "training.example",
+      "type": "domain",
+      "label": "Synthetic training indicator",
+      "source": "documentation example"
+    },
+    {
+      "value": "https://training.example/sign-in",
+      "type": "url",
+      "label": "Synthetic training indicator",
+      "source": "documentation example"
+    }
+  ]
+}

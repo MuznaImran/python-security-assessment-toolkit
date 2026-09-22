@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "python-security-assessment-toolkit"
+version = "1.0.0"
+description = "A defensive Python toolkit for password hygiene, authorized network checks, file integrity, authentication log triage, and local-first IOC lookups"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { file = "LICENSE" }
+authors = [{ name = "Muzna Imran" }]
+keywords = ["cybersecurity", "defensive-security", "soc", "python", "file-integrity"]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Environment :: Console",
+  "Intended Audience :: Education",
+  "Intended Audience :: Information Technology",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Topic :: Security",
+]
+
+[project.scripts]
+cybersec = "cybersec_toolkit.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["cybersec_toolkit*"]

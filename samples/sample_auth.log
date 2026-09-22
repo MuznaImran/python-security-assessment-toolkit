@@ -1,0 +1,9 @@
+# Python Security Assessment Toolkit sample: synthetic documentation IPs only.
+# Format: ISO8601 timestamp, optional hostname, sshd[PID]: OpenSSH auth message.
+2026-09-20T09:00:00+05:00 lab-host sshd[4120]: Accepted publickey for alice from 192.0.2.10 port 50120 ssh2
+2026-09-20T09:14:00+05:00 lab-host sshd[4312]: Failed password for invalid user admin from 203.0.113.44 port 51234 ssh2
+2026-09-20T09:14:38+05:00 lab-host sshd[4313]: Failed password for invalid user admin from 203.0.113.44 port 51235 ssh2
+2026-09-20T09:15:02+05:00 lab-host sshd[4314]: Failed password for alice from 203.0.113.44 port 51236 ssh2
+2026-09-20T09:16:11+05:00 lab-host sshd[4315]: Failed password for alice from 203.0.113.44 port 51237 ssh2
+2026-09-20T09:17:08+05:00 lab-host sshd[4316]: Failed password for invalid user root from 203.0.113.44 port 51238 ssh2
+2026-09-20T09:25:00+05:00 lab-host sshd[4400]: Failed password for alice from 198.51.100.20 port 52000 ssh2
